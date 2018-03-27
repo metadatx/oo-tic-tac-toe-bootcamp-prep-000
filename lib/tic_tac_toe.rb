@@ -96,9 +96,9 @@ class TicTacToe
     while !over?
       turn
     end
-    if draw? 
+    if draw?
       puts "draw"
-    else 
+    else
       puts "winner is" + winner
     end
   end
