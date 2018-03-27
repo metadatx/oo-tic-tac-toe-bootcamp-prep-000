@@ -44,7 +44,8 @@ class TicTacToe
    input = gets.strip
    index = input_to_index(input)
    if valid_move?(index)
-     move(index, current_player)
+     player = current_player
+     move(index, player)
    else
      turn
    end
@@ -82,7 +83,7 @@ class TicTacToe
       else
         return false
       end
-    end
+  end
 
   def winner
     if(win_cond = won?)
@@ -95,8 +96,10 @@ class TicTacToe
     while !over?
       turn
     end
-    if draw? puts "draw"
-    else puts "winner is" + winner
+    if draw? 
+      puts "draw"
+    else 
+      puts "winner is" + winner
     end
   end
 
