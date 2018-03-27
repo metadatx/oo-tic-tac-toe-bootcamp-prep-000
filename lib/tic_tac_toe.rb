@@ -92,10 +92,11 @@ class TicTacToe
   end
 
   def play
-    if over?
-      if draw? puts "draw"
-      else puts "winner is" + winner()
-      end
+    while !over?
+      turn()  
+    end
+    if draw? puts "draw"
+    else puts "winner is" + winner()
     end
   end
 
