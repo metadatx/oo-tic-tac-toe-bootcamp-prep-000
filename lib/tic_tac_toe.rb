@@ -93,7 +93,7 @@ class TicTacToe
 
   def play
     while !over?
-      turn()  
+      turn()
     end
     if draw? puts "draw"
     else puts "winner is" + winner()
